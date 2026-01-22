@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #020617;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 18px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(120deg, #020617, #486ea9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 520px;
+    animation: slideIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: none;
+    background: #38bdf8;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+.hero-laptop {
+    font-size: 130px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ABOUT */
+.about {
+    padding: 80px 8%;
+    background: white;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.product-box {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: white;
+    padding: 30px;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.product-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.product-card span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* SPECS */
+.specs {
+    background: #020617;
+    color: white;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.spec-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.spec {
+    background: #1e293b;
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+/* WHY */
+.why {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.why-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    background: #38bdf8;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+/* REVIEWS */
+.reviews {
+    padding: 80px 8%;
+    background: white;
+    text-align: center;
+}
+
+.review-box {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: #f1f5f9;
+    padding: 30px;
+    width: 280px;
+    border-radius: 15px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 80px 8%;
+    background: #38bdf8;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMATIONS */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-80px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        display: none;
+    }
+}
